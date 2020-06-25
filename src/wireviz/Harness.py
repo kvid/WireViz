@@ -201,20 +201,13 @@ class Harness:
                 for bla in p:
                     html = f'{html}<td>{bla}</td>'
                 html = f'{html}</tr>'
-                colors = wv_colors.translate_color(connection, 'hex').split(':')
-                rowheight = 6 #/ len(colors)
-                collen = len(p) / len(colors)
-                html = f'{html}<tr cellpadding="0" cellspacing="0" border="0"><td border="2" sides="tb" colspan="{len(p)}" cellspacing="0" cellpadding="0" port="w{i}"><table cellspacing="0" cellpadding="0" border="0"><tr>'
-                for j, bgcolor in enumerate(colors,1):
+                bgcolors = ('#000000:' + wv_colors.translate_color(connection, 'hex') + ':#000000').split(':')
+                html = f'{html}<tr><td colspan="{len(p)}" border="0" cellspacing="0" cellpadding="0" port="w{i}" height="{2*len(bgcolors)}"><table cellspacing="0" cellborder="0" border = "0">'
+                for bgcolor in bgcolors[::-1]: # Reverse to match the curved wires when more than 2 colors
                     if bgcolor == '':
                         bgcolor = wv_colors.default_color
-                    # todo border 2
-                    # port="{port}"
-                    # html = html + '<td colspan="{colspan}" cellpadding="0" height="{rowheight}" bgcolor="{bgcolor}" border="1" sides="tb" {port}></td>'.format(
-                    #     colspan=collen, bgcolor=bgcolor if bgcolor != '' else wv_colors.default_color,
-                    #     port='port="w{}"'.format(i) if j == len(colors) else '', rowheight=rowheight)
-                    html = f'{html}<td colspan="{collen}" cellspacing="0" cellpadding="0" height="{rowheight}" bgcolor="{bgcolor}" ></td>'
-                html = f'{html}</tr></table></td></tr>'
+                    html = f'{html}<tr><td colspan="{len(p)}" cellpadding="0" height="2" bgcolor="{bgcolor}" border="0"></td></tr>'
+                html = f'{html}</table></td></tr>'
                 if(cable.category == 'bundle'):  # for bundles individual wires can have part information
                     # create a list of wire parameters
                     wireidentification = []
