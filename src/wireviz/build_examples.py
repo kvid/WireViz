@@ -25,6 +25,7 @@ paths['demos']    = {'path': Path(script_path).parent.parent.parent / 'examples'
 
 input_extensions = ['.yml']
 generated_extensions = ['.gv', '.png', '.svg', '.html', '.bom.tsv']
+extensions_not_from_graphviz = [ext for ext in generated_extensions if ext[-1] == 'v']
 readme = 'readme.md'
 
 
@@ -86,6 +87,18 @@ def clean_examples():
                 os.remove(filename)
 
 
+def compare_generated(include_from_graphviz = False):
+    compare_extensions = generated_extensions if include_from_graphviz else extensions_not_from_graphviz
+    for key, value in paths.items():
+        # collect files to compare
+        filename_list = collect_filenames('Comparing', key, compare_extensions, readme)
+        # compare files
+        for filename in filename_list:
+            cmd = f'git --no-pager diff {filename}'
+            print(f'  {cmd}')
+            os.system(cmd)
+
+
 def restore_generated():
     for key, value in paths.items():
         # collect input YAML files
@@ -119,6 +132,8 @@ def main():
                 build('tutorial', build_readme = True, include_source = True, include_readme = True)
     elif args.action == 'clean':
         clean_examples()
+    elif args.action == 'compare':
+        compare_generated()
     elif args.action == 'restore':
         restore_generated()
 
