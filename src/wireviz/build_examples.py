@@ -86,6 +86,20 @@ def clean_examples():
                 os.remove(filename)
 
 
+def restore_generated():
+    for key, value in paths.items():
+        # collect input YAML files
+        filename_list = collect_filenames('Restoring', key, input_extensions)
+        # collect files to restore
+        filename_list = [fn.with_suffix(ext) for fn in filename_list for ext in generated_extensions]
+        filename_list.append(value['path'] / readme)
+        # restore files
+        for filename in filename_list:
+            cmd = f'git checkout -- {filename}'
+            print(f'  {cmd}')
+            os.system(cmd)
+
+
 def parse_args():
     parser = argparse.ArgumentParser(description='Wireviz Example Manager',)
     parser.add_argument('action', nargs='?', action='store', default='build')
@@ -105,6 +119,8 @@ def main():
                 build('tutorial', build_readme = True, include_source = True, include_readme = True)
     elif args.action == 'clean':
         clean_examples()
+    elif args.action == 'restore':
+        restore_generated()
 
 
 if __name__ == '__main__':
