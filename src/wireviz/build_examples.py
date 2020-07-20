@@ -75,8 +75,8 @@ def build(dirname, build_readme, include_source, include_readme):
                 out.write(f'[Source]({yaml_file.name}) - [Bill of Materials]({yaml_file.stem}.bom.tsv)\n\n\n')
 
 
-def clean_examples():
-    for key in paths.keys():
+def clean_generated(pathkeys):
+    for key in pathkeys:
         # collect and remove files
         for filename in collect_filenames('Cleaning', key, generated_extensions, readme):
             if filename.is_file():
@@ -84,9 +84,9 @@ def clean_examples():
                 os.remove(filename)
 
 
-def compare_generated(include_from_graphviz = False):
+def compare_generated(pathkeys, include_from_graphviz = False):
     compare_extensions = generated_extensions if include_from_graphviz else extensions_not_from_graphviz
-    for key in paths.keys():
+    for key in pathkeys:
         # collect and compare files
         for filename in collect_filenames('Comparing', key, compare_extensions, readme):
             cmd = f'git --no-pager diff {filename}'
@@ -94,13 +94,13 @@ def compare_generated(include_from_graphviz = False):
             os.system(cmd)
 
 
-def restore_generated():
-    for key, value in paths.items():
+def restore_generated(pathkeys):
+    for key in pathkeys:
         # collect input YAML files
         filename_list = collect_filenames('Restoring', key, input_extensions)
         # collect files to restore
         filename_list = [fn.with_suffix(ext) for fn in filename_list for ext in generated_extensions]
-        filename_list.append(value['path'] / readme)
+        filename_list.append(paths[key]['path'] / readme)
         # restore files
         for filename in filename_list:
             cmd = f'git checkout -- {filename}'
@@ -110,8 +110,8 @@ def restore_generated():
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Wireviz Example Manager',)
-    parser.add_argument('action', nargs='?', action='store', default='build')
-    parser.add_argument('-generate', nargs='*', choices=['examples', 'demos', 'tutorial'], default=['examples', 'demos', 'tutorial'])
+    parser.add_argument('action', nargs='?', action='store', choices=['build','clean','compare','restore'], default='build')
+    parser.add_argument('-generate', nargs='*', choices=paths.keys(), default=paths.keys())
     return parser.parse_args()
 
 
@@ -126,11 +126,11 @@ def main():
             if gentype == 'tutorial':
                 build('tutorial', build_readme = True, include_source = True, include_readme = True)
     elif args.action == 'clean':
-        clean_examples()
+        clean_generated(args.generate)
     elif args.action == 'compare':
-        compare_generated()
+        compare_generated(args.generate)
     elif args.action == 'restore':
-        restore_generated()
+        restore_generated(args.generate)
 
 
 if __name__ == '__main__':
