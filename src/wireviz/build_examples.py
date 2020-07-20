@@ -39,14 +39,13 @@ def collect_filenames(description, pathkey, ext_list, extrafile = None):
 
 
 def build(dirname, build_readme, include_source, include_readme):
-    # collect input YAML files
-    filename_list = collect_filenames('Building', dirname, input_extensions)
     # build files
     path = paths[dirname]['path']
     if build_readme:
         with open_file_write(path / 'readme.md') as out:
             out.write(f'# {paths[dirname]["title"]}\n\n')
-    for yaml_file in filename_list:
+    # collect and iterate input YAML files
+    for yaml_file in collect_filenames('Building', dirname, input_extensions):
         print(f'  {yaml_file}')
         wireviz.parse_file(yaml_file)
 
@@ -77,11 +76,9 @@ def build(dirname, build_readme, include_source, include_readme):
 
 
 def clean_examples():
-    for k, v in paths.items():
-        # collect files to remove
-        filename_list = collect_filenames('Cleaning', k, generated_extensions, readme)
-        # remove files
-        for filename in filename_list:
+    for key in paths.keys():
+        # collect and remove files
+        for filename in collect_filenames('Cleaning', key, generated_extensions, readme):
             if filename.is_file():
                 print(f'  rm {filename}')
                 os.remove(filename)
@@ -89,11 +86,9 @@ def clean_examples():
 
 def compare_generated(include_from_graphviz = False):
     compare_extensions = generated_extensions if include_from_graphviz else extensions_not_from_graphviz
-    for key, value in paths.items():
-        # collect files to compare
-        filename_list = collect_filenames('Comparing', key, compare_extensions, readme)
-        # compare files
-        for filename in filename_list:
+    for key in paths.keys():
+        # collect and compare files
+        for filename in collect_filenames('Comparing', key, compare_extensions, readme):
             cmd = f'git --no-pager diff {filename}'
             print(f'  {cmd}')
             os.system(cmd)
