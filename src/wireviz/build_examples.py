@@ -23,21 +23,25 @@ paths['tutorial'] = {'path': Path(script_path).parent.parent.parent / 'tutorial'
 paths['demos']    = {'path': Path(script_path).parent.parent.parent / 'examples',
                      'prefix': 'demo'}
 
+input_extensions = ['.yml']
+generated_extensions = ['.gv', '.png', '.svg', '.html', '.bom.tsv']
 readme = 'readme.md'
 
 
+def collect_filenames(description, pathkey, ext_list, extrafile = None):
+    path = paths[pathkey]['path']
+    patterns = [f"{paths[pathkey]['prefix']}*{ext}" for ext in ext_list]
+    if extrafile is not None:
+        patterns.append(extrafile)
+    print(f"{description} {path}")
+    return sorted([filename for pattern in patterns for filename in path.glob(pattern)])
+
+
 def build(dirname, build_readme, include_source, include_readme):
-    filename_list = []
-    path   = paths[dirname]['path']
-    prefix = paths[dirname]['prefix']
-    print(f'Building {path}')
     # collect input YAML files
-    file_iterator = path.iterdir()
-    for entry in file_iterator:
-        if entry.is_file() and entry.match(f'{prefix}*.yml'):
-            filename_list.append(entry)
-    filename_list = sorted(filename_list)
+    filename_list = collect_filenames('Building', dirname, input_extensions)
     # build files
+    path = paths[dirname]['path']
     if build_readme:
         with open_file_write(path / 'readme.md') as out:
             out.write(f'# {paths[dirname]["title"]}\n\n')
@@ -72,20 +76,9 @@ def build(dirname, build_readme, include_source, include_readme):
 
 
 def clean_examples():
-    generated_extensions = ['.gv', '.png', '.svg', '.html', '.bom.tsv']
     for k, v in paths.items():
-        filepath = v['path']
-        print(f'Cleaning {filepath}')
         # collect files to remove
-        filename_list = []
-        file_iterator = filepath.iterdir()
-        for entry in file_iterator:
-            for ext in generated_extensions:
-                if entry.is_file() and entry.match(f'*{ext}'):
-                    filename_list.append(entry)
-        filename_list.append(filepath / readme)
-
-        filename_list = sorted(filename_list)
+        filename_list = collect_filenames('Cleaning', k, generated_extensions, readme)
         # remove files
         for filename in filename_list:
             if filename.is_file():
