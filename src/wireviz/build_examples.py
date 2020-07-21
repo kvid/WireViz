@@ -47,7 +47,7 @@ def build(dirname):
     if build_readme:
         include_readme = 'md' in paths[dirname][readme]
         include_source = 'yml' in paths[dirname][readme]
-        with open_file_write(path / 'readme.md') as out:
+        with open_file_write(path / readme) as out:
             out.write(f'# {paths[dirname]["title"]}\n\n')
     # collect and iterate input YAML files
     for yaml_file in collect_filenames('Building', dirname, input_extensions):
@@ -59,9 +59,9 @@ def build(dirname):
 
             with open_file_append(path / readme) as out:
                 if include_readme:
-                    with open_file_read(path / f'{yaml_file.stem}.md') as info:
+                    with open_file_read(yaml_file.with_suffix('.md')) as info:
                         for line in info:
-                            out.write(line.replace('## ', '## {} - '.format(i)))
+                            out.write(line.replace('## ', f'## {i} - '))
                         out.write('\n\n')
                 else:
                     out.write(f'## Example {i}\n')
