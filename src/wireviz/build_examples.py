@@ -52,17 +52,15 @@ def build(dirname, build_readme, include_source, include_readme):
         if build_readme:
             i = ''.join(filter(str.isdigit, yaml_file.stem))
 
-            if include_readme:
-                with open_file_append(path / readme) as out:
+            with open_file_append(path / readme) as out:
+                if include_readme:
                     with open_file_read(path / f'{yaml_file.stem}.md') as info:
                         for line in info:
                             out.write(line.replace('## ', '## {} - '.format(i)))
                         out.write('\n\n')
-            else:
-                with open_file_append(path / readme) as out:
+                else:
                     out.write(f'## Example {i}\n')
 
-            with open_file_append(path / readme) as out:
                 if include_source:
                     with open_file_read(yaml_file) as src:
                         out.write('```yaml\n')
