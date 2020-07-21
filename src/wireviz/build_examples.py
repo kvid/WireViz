@@ -13,12 +13,15 @@ from wireviz import wireviz
 from wv_helper import open_file_write, open_file_read, open_file_append
 
 
+readme = 'readme.md'
 paths = {}
 paths['examples'] = {'path': Path(script_path).parent.parent.parent / 'examples',
                      'prefix': 'ex',
+                     readme: [], # Include no files
                      'title': 'Example Gallery'}
 paths['tutorial'] = {'path': Path(script_path).parent.parent.parent / 'tutorial',
                      'prefix': 'tutorial',
+                     readme: ['md', 'yml'], # Include .md and .yml files
                      'title': 'WireViz Tutorial'}
 paths['demos']    = {'path': Path(script_path).parent.parent.parent / 'examples',
                      'prefix': 'demo'}
@@ -26,7 +29,6 @@ paths['demos']    = {'path': Path(script_path).parent.parent.parent / 'examples'
 input_extensions = ['.yml']
 generated_extensions = ['.gv', '.png', '.svg', '.html', '.bom.tsv']
 extensions_not_from_graphviz = [ext for ext in generated_extensions if ext[-1] == 'v']
-readme = 'readme.md'
 
 
 def collect_filenames(description, pathkey, ext_list, extrafile = None):
@@ -38,10 +40,13 @@ def collect_filenames(description, pathkey, ext_list, extrafile = None):
     return sorted([filename for pattern in patterns for filename in path.glob(pattern)])
 
 
-def build(dirname, build_readme, include_source, include_readme):
+def build(dirname):
     # build files
     path = paths[dirname]['path']
+    build_readme = readme in paths[dirname]
     if build_readme:
+        include_readme = 'md' in paths[dirname][readme]
+        include_source = 'yml' in paths[dirname][readme]
         with open_file_write(path / 'readme.md') as out:
             out.write(f'# {paths[dirname]["title"]}\n\n')
     # collect and iterate input YAML files
@@ -76,7 +81,7 @@ def build(dirname, build_readme, include_source, include_readme):
 def clean_generated(pathkeys):
     for key in pathkeys:
         # collect and remove files
-        for filename in collect_filenames('Cleaning', key, generated_extensions, readme):
+        for filename in collect_filenames('Cleaning', key, generated_extensions, readme if readme in paths[key] else None):
             if filename.is_file():
                 print(f'  rm {filename}')
                 os.remove(filename)
@@ -86,7 +91,7 @@ def compare_generated(pathkeys, include_from_graphviz = False):
     compare_extensions = generated_extensions if include_from_graphviz else extensions_not_from_graphviz
     for key in pathkeys:
         # collect and compare files
-        for filename in collect_filenames('Comparing', key, compare_extensions, readme):
+        for filename in collect_filenames('Comparing', key, compare_extensions, readme if readme in paths[key] else None):
             cmd = f'git --no-pager diff {filename}'
             print(f'  {cmd}')
             os.system(cmd)
@@ -98,7 +103,8 @@ def restore_generated(pathkeys):
         filename_list = collect_filenames('Restoring', key, input_extensions)
         # collect files to restore
         filename_list = [fn.with_suffix(ext) for fn in filename_list for ext in generated_extensions]
-        filename_list.append(paths[key]['path'] / readme)
+        if readme in paths[key]:
+            filename_list.append(paths[key]['path'] / readme)
         # restore files
         for filename in filename_list:
             cmd = f'git checkout -- {filename}'
@@ -117,12 +123,7 @@ def main():
     args = parse_args()
     if args.action == 'build':
         for gentype in args.generate:
-            if gentype == 'demos':
-                build('demos', build_readme = False, include_source = False, include_readme = False)
-            if gentype == 'examples':
-                build('examples', build_readme = True, include_source = False, include_readme = False)
-            if gentype == 'tutorial':
-                build('tutorial', build_readme = True, include_source = True, include_readme = True)
+            build(gentype)
     elif args.action == 'clean':
         clean_generated(args.generate)
     elif args.action == 'compare':
