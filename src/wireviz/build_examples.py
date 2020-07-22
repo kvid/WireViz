@@ -31,11 +31,11 @@ generated_extensions = ['.gv', '.png', '.svg', '.html', '.bom.tsv']
 extensions_not_from_graphviz = [ext for ext in generated_extensions if ext[-1] == 'v']
 
 
-def collect_filenames(description, groupkey, ext_list, extrafile = None):
+def collect_filenames(description, groupkey, ext_list):
     path = groups[groupkey]['path']
     patterns = [f"{groups[groupkey]['prefix']}*{ext}" for ext in ext_list]
-    if extrafile is not None:
-        patterns.append(extrafile)
+    if ext_list != input_extensions and readme in groups[groupkey]:
+        patterns.append(readme)
     print(f"{description} {path}")
     return sorted([filename for pattern in patterns for filename in path.glob(pattern)])
 
@@ -81,7 +81,7 @@ def build_generated(groupkey):
 def clean_generated(groupkeys):
     for key in groupkeys:
         # collect and remove files
-        for filename in collect_filenames('Cleaning', key, generated_extensions, readme if readme in groups[key] else None):
+        for filename in collect_filenames('Cleaning', key, generated_extensions):
             if filename.is_file():
                 print(f'  rm {filename}')
                 os.remove(filename)
@@ -91,7 +91,7 @@ def compare_generated(groupkeys, include_from_graphviz = False):
     compare_extensions = generated_extensions if include_from_graphviz else extensions_not_from_graphviz
     for key in groupkeys:
         # collect and compare files
-        for filename in collect_filenames('Comparing', key, compare_extensions, readme if readme in groups[key] else None):
+        for filename in collect_filenames('Comparing', key, compare_extensions):
             cmd = f'git --no-pager diff {filename}'
             print(f'  {cmd}')
             os.system(cmd)
