@@ -121,22 +121,27 @@ def restore_generated(groupkeys):
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Wireviz Example Manager',)
-    parser.add_argument('action', nargs='?', action='store', choices=['build','clean','compare','restore'], default='build')
-    parser.add_argument('-generate', nargs='*', choices=groups.keys(), default=groups.keys())
+    parser.add_argument('action', nargs='?', action='store',
+                        choices=['build','clean','compare','restore'], default='build',
+                        help='what to do with the generated files (default: build)')
+    parser.add_argument('-g', '--groups', nargs='+',
+                        choices=groups.keys(), default=groups.keys(),
+                        help='the groups of generated files (default: all)')
     return parser.parse_args()
 
 
 def main():
     args = parse_args()
     if args.action == 'build':
-        for groupkey in args.generate:
+        # TODO: Move this loop into the function for consistency?
+        for groupkey in args.groups:
             build_generated(groupkey)
     elif args.action == 'clean':
-        clean_generated(args.generate)
+        clean_generated(args.groups)
     elif args.action == 'compare':
-        compare_generated(args.generate)
+        compare_generated(args.groups)
     elif args.action == 'restore':
-        restore_generated(args.generate)
+        restore_generated(args.groups)
 
 
 if __name__ == '__main__':
