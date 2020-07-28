@@ -21,7 +21,7 @@ def main():
         out.write(f'| {" | ".join(modes)} |\n')
         out.write(f'| {" | ".join([":--"] * len(modes))} |\n')
         for color in _color_hex.keys():
-            out.write(f'| {" | ".join([translate_color(color, mode) for mode in modes])} |\n')
+            out.write(f'| `{"` | `".join([translate_color(color, mode) for mode in modes])}` |\n')
 
 
 if __name__ == '__main__':
