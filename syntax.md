@@ -5,7 +5,7 @@
 ```yaml
 connectors:  # dictionary of all used connectors
   <str>   :    # unique connector designator/name
-    ...          # connector attributes (see below)
+    ...          # connector attributes (see [below](#connector-attributes))
   <str>   :
     ...
   ...
