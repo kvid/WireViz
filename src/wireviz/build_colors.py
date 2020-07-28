@@ -23,7 +23,7 @@ def main():
         out.write(f'| {" | ".join([":--"] * len(modes))} |\n')
         for color in _color_hex.keys():
             hex = translate_color(color, 'hex')
-            out.write(f'| ![{hex}](https://via.placeholder.com/15/{hex}/000000?text=+)'
+            out.write(f'| ![{hex}](https://via.placeholder.com/15/{hex[1:]}/000000?text=+)'
                       f' `{"` | `".join([translate_color(color, mode) for mode in modes])}` |\n')
 
 
