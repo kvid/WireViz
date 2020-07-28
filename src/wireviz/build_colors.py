@@ -18,10 +18,13 @@ modes = modes_upper + modes_lower
 def main():
     with open_file_write(Path(script_path).parent.parent.parent / 'examples' / 'colors.md') as out:
         out.write(f'# Colors\n\n')
+        out.write(f'## translate_color(short name, mode)\n\n')
         out.write(f'| {" | ".join(modes)} |\n')
         out.write(f'| {" | ".join([":--"] * len(modes))} |\n')
         for color in _color_hex.keys():
-            out.write(f'| `{"` | `".join([translate_color(color, mode) for mode in modes])}` |\n')
+            hex = translate_color(color, 'hex')
+            out.write(f'| ![{hex}](https://via.placeholder.com/15/{hex}/000000?text=+)'
+                      f' `{"` | `".join([translate_color(color, mode) for mode in modes])}` |\n')
 
 
 if __name__ == '__main__':
