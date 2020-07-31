@@ -49,8 +49,9 @@ def doc_color_codes(out):
     out.write(f'| | {" | ".join(codekeys)} |\n')
     out.write(f'| --: | {" | ".join([":--"] * len(codekeys))} |\n')
     for r in range(max([len(colors) for colors in COLOR_CODES.values()])):
-        columns = ['\n'.join([f'{color_image(c)} `{c}`' for c in get_color_codes(k, r)]) for k in codekeys]
+        columns = [' '.join([f'{color_image(c)} `{c}`' for c in get_color_codes(k, r)]) for k in codekeys]
         out.write(f'| {r} | {" | ".join(columns)} |\n')
+
 
 def main():
     with open_file_write(Path(script_path).parent.parent.parent / 'examples' / 'colors.md') as out:
