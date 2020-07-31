@@ -25,3 +25,236 @@
 | ![#aaaaaa](https://via.placeholder.com/15/aaaaaa/000000?text=+) `SN` | `#AAAAAA` | `TIN` | `VZ` | `sn` | `#aaaaaa` | `tin` | `vz` |
 | ![#84878c](https://via.placeholder.com/15/84878c/000000?text=+) `SR` | `#84878C` | `SILVER` | `AG` | `sr` | `#84878c` | `silver` | `ag` |
 | ![#ffcf80](https://via.placeholder.com/15/ffcf80/000000?text=+) `GD` | `#FFCF80` | `GOLD` | `AU` | `gd` | `#ffcf80` | `gold` | `au` |
+## COLOR_CODES
+
+| | DIN | IEC | BW | TEL | TELALT | T568A | T568B |
+| --: | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| 0 | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH` | ![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN` | ![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` | ![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU`
+![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH` | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU` | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN` | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `OG` |
+| 1 | ![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN` | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD` | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH` | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU` | ![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU` | ![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN` | ![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `OG` |
+| 2 | ![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN` | ![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `OG` |  | ![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `OG`
+![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH` | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `OG` | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `OG` | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN` |
+| 3 | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) `YE` | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) `YE` |  | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `OG` | ![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `OG` | ![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU` | ![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU` |
+| 4 | ![#999999](https://via.placeholder.com/15/999999/000000?text=+) `GY` | ![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN` |  | ![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN`
+![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH` | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN` | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU` | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU` |
+| 5 | ![#ff66cc](https://via.placeholder.com/15/ff66cc/000000?text=+) `PK` | ![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU` |  | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN` | ![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN` | ![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `OG` | ![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN` |
+| 6 | ![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU` | ![#8000ff](https://via.placeholder.com/15/8000ff/000000?text=+) `VT` |  | ![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN`
+![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH` | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN` | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN` | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN` |
+| 7 | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD` | ![#999999](https://via.placeholder.com/15/999999/000000?text=+) `GY` |  | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN` | ![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN` | ![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN` | ![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN` |
+| 8 | ![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH` |  | ![#708090](https://via.placeholder.com/15/708090/000000?text=+) `SL`
+![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH` | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#708090](https://via.placeholder.com/15/708090/000000?text=+) `SL` |  |  |
+| 9 | ![#8000ff](https://via.placeholder.com/15/8000ff/000000?text=+) `VT` | ![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#708090](https://via.placeholder.com/15/708090/000000?text=+) `SL` | ![#708090](https://via.placeholder.com/15/708090/000000?text=+) `SL` |  |  |
+| 10 | ![#999999](https://via.placeholder.com/15/999999/000000?text=+) `GY`
+![#ff66cc](https://via.placeholder.com/15/ff66cc/000000?text=+) `PK` |  |  | ![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU`
+![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD` | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD`
+![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU` |  |  |
+| 11 | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD`
+![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU` |  |  | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD`
+![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU` | ![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU`
+![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD` |  |  |
+| 12 | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN` |  |  | ![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `OG`
+![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD` | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD`
+![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `OG` |  |  |
+| 13 | ![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN`
+![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN` |  |  | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD`
+![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `OG` | ![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `OG`
+![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD` |  |  |
+| 14 | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) `YE` |  |  | ![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN`
+![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD` | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD`
+![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN` |  |  |
+| 15 | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) `YE`
+![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN` |  |  | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD`
+![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN` | ![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN`
+![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD` |  |  |
+| 16 | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#999999](https://via.placeholder.com/15/999999/000000?text=+) `GY` |  |  | ![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN`
+![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD` | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD`
+![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN` |  |  |
+| 17 | ![#999999](https://via.placeholder.com/15/999999/000000?text=+) `GY`
+![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN` |  |  | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD`
+![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN` | ![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN`
+![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD` |  |  |
+| 18 | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#ff66cc](https://via.placeholder.com/15/ff66cc/000000?text=+) `PK` |  |  | ![#708090](https://via.placeholder.com/15/708090/000000?text=+) `SL`
+![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD` | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD`
+![#708090](https://via.placeholder.com/15/708090/000000?text=+) `SL` |  |  |
+| 19 | ![#ff66cc](https://via.placeholder.com/15/ff66cc/000000?text=+) `PK`
+![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN` |  |  | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD`
+![#708090](https://via.placeholder.com/15/708090/000000?text=+) `SL` | ![#708090](https://via.placeholder.com/15/708090/000000?text=+) `SL`
+![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD` |  |  |
+| 20 | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU` |  |  | ![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` | ![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK`
+![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU` |  |  |
+| 21 | ![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN`
+![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU` |  |  | ![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK`
+![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU` | ![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  |
+| 22 | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD` |  |  | ![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `OG`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` | ![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK`
+![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `OG` |  |  |
+| 23 | ![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN`
+![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD` |  |  | ![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK`
+![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `OG` | ![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `OG`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  |
+| 24 | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  | ![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` | ![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK`
+![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN` |  |  |
+| 25 | ![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  | ![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK`
+![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN` | ![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  |
+| 26 | ![#999999](https://via.placeholder.com/15/999999/000000?text=+) `GY`
+![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN` |  |  | ![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` | ![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK`
+![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN` |  |  |
+| 27 | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) `YE`
+![#999999](https://via.placeholder.com/15/999999/000000?text=+) `GY` |  |  | ![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK`
+![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN` | ![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  |
+| 28 | ![#ff66cc](https://via.placeholder.com/15/ff66cc/000000?text=+) `PK`
+![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN` |  |  | ![#708090](https://via.placeholder.com/15/708090/000000?text=+) `SL`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` | ![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK`
+![#708090](https://via.placeholder.com/15/708090/000000?text=+) `SL` |  |  |
+| 29 | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) `YE`
+![#ff66cc](https://via.placeholder.com/15/ff66cc/000000?text=+) `PK` |  |  | ![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK`
+![#708090](https://via.placeholder.com/15/708090/000000?text=+) `SL` | ![#708090](https://via.placeholder.com/15/708090/000000?text=+) `SL`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  |
+| 30 | ![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN`
+![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU` |  |  | ![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU`
+N/A `YW` | N/A `YW`
+![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU` |  |  |
+| 31 | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) `YE`
+![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU` |  |  | N/A `YW`
+![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU` | ![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU`
+N/A `YW` |  |  |
+| 32 | ![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN`
+![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD` |  |  | ![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `OG`
+N/A `YW` | N/A `YW`
+![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `OG` |  |  |
+| 33 | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) `YE`
+![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD` |  |  | N/A `YW`
+![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `OG` | ![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `OG`
+N/A `YW` |  |  |
+| 34 | ![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  | ![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN`
+N/A `YW` | N/A `YW`
+![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN` |  |  |
+| 35 | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) `YE`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  | N/A `YW`
+![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN` | ![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN`
+N/A `YW` |  |  |
+| 36 | ![#999999](https://via.placeholder.com/15/999999/000000?text=+) `GY`
+![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU` |  |  | ![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN`
+N/A `YW` | N/A `YW`
+![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN` |  |  |
+| 37 | ![#ff66cc](https://via.placeholder.com/15/ff66cc/000000?text=+) `PK`
+![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU` |  |  | N/A `YW`
+![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN` | ![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN`
+N/A `YW` |  |  |
+| 38 | ![#999999](https://via.placeholder.com/15/999999/000000?text=+) `GY`
+![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD` |  |  | ![#708090](https://via.placeholder.com/15/708090/000000?text=+) `SL`
+N/A `YW` | N/A `YW`
+![#708090](https://via.placeholder.com/15/708090/000000?text=+) `SL` |  |  |
+| 39 | ![#ff66cc](https://via.placeholder.com/15/ff66cc/000000?text=+) `PK`
+![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD` |  |  | N/A `YW`
+![#708090](https://via.placeholder.com/15/708090/000000?text=+) `SL` | ![#708090](https://via.placeholder.com/15/708090/000000?text=+) `SL`
+N/A `YW` |  |  |
+| 40 | ![#999999](https://via.placeholder.com/15/999999/000000?text=+) `GY`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  | ![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU`
+![#8000ff](https://via.placeholder.com/15/8000ff/000000?text=+) `VT` | ![#8000ff](https://via.placeholder.com/15/8000ff/000000?text=+) `VT`
+![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU` |  |  |
+| 41 | ![#ff66cc](https://via.placeholder.com/15/ff66cc/000000?text=+) `PK`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  | ![#8000ff](https://via.placeholder.com/15/8000ff/000000?text=+) `VT`
+![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU` | ![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU`
+![#8000ff](https://via.placeholder.com/15/8000ff/000000?text=+) `VT` |  |  |
+| 42 | ![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  | ![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `OG`
+![#8000ff](https://via.placeholder.com/15/8000ff/000000?text=+) `VT` | ![#8000ff](https://via.placeholder.com/15/8000ff/000000?text=+) `VT`
+![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `OG` |  |  |
+| 43 | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  | ![#8000ff](https://via.placeholder.com/15/8000ff/000000?text=+) `VT`
+![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `OG` | ![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `OG`
+![#8000ff](https://via.placeholder.com/15/8000ff/000000?text=+) `VT` |  |  |
+| 44 | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  | ![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN`
+![#8000ff](https://via.placeholder.com/15/8000ff/000000?text=+) `VT` | ![#8000ff](https://via.placeholder.com/15/8000ff/000000?text=+) `VT`
+![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN` |  |  |
+| 45 | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) `YE`
+![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  | ![#8000ff](https://via.placeholder.com/15/8000ff/000000?text=+) `VT`
+![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN` | ![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN`
+![#8000ff](https://via.placeholder.com/15/8000ff/000000?text=+) `VT` |  |  |
+| 46 | ![#999999](https://via.placeholder.com/15/999999/000000?text=+) `GY`
+![#ff66cc](https://via.placeholder.com/15/ff66cc/000000?text=+) `PK`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  | ![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN`
+![#8000ff](https://via.placeholder.com/15/8000ff/000000?text=+) `VT` | ![#8000ff](https://via.placeholder.com/15/8000ff/000000?text=+) `VT`
+![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN` |  |  |
+| 47 | ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD`
+![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  | ![#8000ff](https://via.placeholder.com/15/8000ff/000000?text=+) `VT`
+![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN` | ![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN`
+![#8000ff](https://via.placeholder.com/15/8000ff/000000?text=+) `VT` |  |  |
+| 48 | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  | ![#708090](https://via.placeholder.com/15/708090/000000?text=+) `SL`
+![#8000ff](https://via.placeholder.com/15/8000ff/000000?text=+) `VT` | ![#8000ff](https://via.placeholder.com/15/8000ff/000000?text=+) `VT`
+![#708090](https://via.placeholder.com/15/708090/000000?text=+) `SL` |  |  |
+| 49 | ![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN`
+![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `GN`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  | ![#8000ff](https://via.placeholder.com/15/8000ff/000000?text=+) `VT`
+![#708090](https://via.placeholder.com/15/708090/000000?text=+) `SL` | ![#708090](https://via.placeholder.com/15/708090/000000?text=+) `SL`
+![#8000ff](https://via.placeholder.com/15/8000ff/000000?text=+) `VT` |  |  |
+| 50 | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) `YE`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  |  |  |  |  |
+| 51 | ![#ffff00](https://via.placeholder.com/15/ffff00/000000?text=+) `YE`
+![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  |  |  |  |  |
+| 52 | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#999999](https://via.placeholder.com/15/999999/000000?text=+) `GY`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  |  |  |  |  |
+| 53 | ![#999999](https://via.placeholder.com/15/999999/000000?text=+) `GY`
+![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  |  |  |  |  |
+| 54 | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#ff66cc](https://via.placeholder.com/15/ff66cc/000000?text=+) `PK`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  |  |  |  |  |
+| 55 | ![#ff66cc](https://via.placeholder.com/15/ff66cc/000000?text=+) `PK`
+![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  |  |  |  |  |
+| 56 | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  |  |  |  |  |
+| 57 | ![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN`
+![#0066ff](https://via.placeholder.com/15/0066ff/000000?text=+) `BU`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  |  |  |  |  |
+| 58 | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `WH`
+![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  |  |  |  |  |
+| 59 | ![#895956](https://via.placeholder.com/15/895956/000000?text=+) `BN`
+![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `RD`
+![#000000](https://via.placeholder.com/15/000000/000000?text=+) `BK` |  |  |  |  |  |  |

@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import sys
+from collections import defaultdict
 from pathlib import Path
 
 script_path = Path(__file__).absolute()
@@ -11,13 +12,27 @@ from wireviz.wv_colors import COLOR_CODES, _color_hex, translate_color
 from wv_helper import open_file_write
 
 colorkeys = _color_hex.keys()
+key_error = defaultdict(int)
 
 
-def color_image(hex, size='15')
-    if isinstance(hex, list
-    retrn f'![{hex}](https://via.placeholder.com/{size}/{hex[1:]}/000000?text=+)'
+def get_color_codes(key, n):
+    try:
+        codes = COLOR_CODES[key][n]
+        return [codes[i:i+2] for i in range(0, len(codes), 2)]
+    except IndexError:
+        return []
 
-def doc_translate_color(out)
+
+def color_image(code, size=15):
+    try:
+        hex = _color_hex[code]
+        return f'![{hex}](https://via.placeholder.com/{size}/{hex[1:]}/000000?text=+)'
+    except KeyError:
+        key_error[code] += 1
+        return f'N/A'
+
+
+def doc_translate_color(out):
     modes_lower = ['short', 'hex', 'full', 'ger']
     modes_upper = [mode.upper() for mode in modes_lower]
     modes = modes_upper + modes_lower
@@ -25,26 +40,25 @@ def doc_translate_color(out)
     out.write(f'| {" | ".join(modes)} |\n')
     out.write(f'| {" | ".join([":--"] * len(modes))} |\n')
     for color in colorkeys:
-        hex = translate_color(color, 'hex')
-        out.write(f'| {color_image(hex)} `{"` | `".join([translate_color(color, mode) for mode in modes])}` |\n')
+        out.write(f'| {color_image(color)} `{"` | `".join([translate_color(color, mode) for mode in modes])}` |\n')
 
 
-def doc_color_codes(out)
+def doc_color_codes(out):
     codekeys = COLOR_CODES.keys()
     out.write(f'## COLOR_CODES\n\n')
     out.write(f'| | {" | ".join(codekeys)} |\n')
     out.write(f'| --: | {" | ".join([":--"] * len(codekeys))} |\n')
-    for i in range(max([len(colors) for colors in COLOR_CODES.values()])):
-        columns = [colors.get(i, '') for colors in COLOR_CODES.values()]
-        color![{hex}](https://via.placeholder.com/15/{hex[1:]}/000000?text=+)
-        out.write(f'| {i} | {"".join([color_image(hex) for hex in get_color_hex(COLOR_CODES[code].get(i, ""))])}
-                  f' `{"` | `".join([translate_color(color, mode) for mode in modes])}` |\n')
+    for r in range(max([len(colors) for colors in COLOR_CODES.values()])):
+        columns = ['\n'.join([f'{color_image(c)} `{c}`' for c in get_color_codes(k, r)]) for k in codekeys]
+        out.write(f'| {r} | {" | ".join(columns)} |\n')
 
 def main():
     with open_file_write(Path(script_path).parent.parent.parent / 'examples' / 'colors.md') as out:
         out.write(f'# Colors\n\n')
         doc_translate_color(out)
         doc_color_codes(out)
+    for key, count in key_error.items():
+        print(f'{count} bad `{key}` values')
 
 
 if __name__ == '__main__':
