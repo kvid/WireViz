@@ -29,7 +29,7 @@ def color_image(code, size=15):
         return f'![{hex}](https://via.placeholder.com/{size}/{hex[1:]}/000000?text=+)'
     except KeyError:
         key_error[code] += 1
-        return f'N/A'
+        return color_image('WH', size).replace('+)', 'N+A)')
 
 
 def doc_translate_color(out):
