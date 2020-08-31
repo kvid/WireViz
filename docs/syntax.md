@@ -316,19 +316,13 @@ Both connectors and cables accept including an image with a caption within their
 ```yaml
 image:
   src: <path>        # path to the image file
-  # optional parameters:
+  # optional attributes:
   caption: <str>     # text to display below the image
-  width: <int>       # range: 1~65535; unit: ???
-  height: <int>      # range: 1~65535; unit: ???
-  fixedsize: <bool>  # ???
-  scale: <str>       # scaling behavior; possible values:
-                     # false   does not scale the image
-                     # true    scale image proportionally
-                     #         to fit within given max. width and height
-                     # width   scale image proportionally to given width
-                     # height  scale image proportionally to given height
-                     # both    resize to given width and height
+  width: <int>       # scale image (proportionally unless height also is set) to width in points
+  height: <int>      # scale image (proportionally unless width also is set) to height in points
+  # the image might get distorted when both width and height are set
 ```
+[More advanced scaling](advanced_image_usage.md) is also possible, but seldom needed.
 
 
 ## Multiline strings
