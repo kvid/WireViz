@@ -10,7 +10,7 @@ jobs:
         # ubuntu-22.04 is required to support Python 3.7-3.12
         # ubuntu-24.04 is better when Python 3.9-3.12 is enough
         # More details: https://github.com/actions/runner-images/issues/10636
-        os: [ubuntu-22.04]
+        os: [ubuntu-22.04, ubuntu-24.04]
         python-version: ["3.7", "3.8", "3.9", "3.10", "3.11", "3.12"]
     runs-on: ${{ matrix.os }}
     steps:
