@@ -7,6 +7,7 @@ from typing import Callable, Dict, List, Union
 from wireviz import APP_NAME, APP_URL, __version__, wv_colors
 from wireviz.DataClasses import Metadata, Options
 from wireviz.svgembed import data_URI_base64
+from wireviz.wv_bom import make_list
 from wireviz.wv_gv_html import html_line_breaks
 from wireviz.wv_helper import (
     file_read_text,
@@ -21,19 +22,16 @@ def generate_html_output(
     bom_list: List[List[str]],
     metadata: Metadata,
     options: Options,
-    source: Union[str, Path] = None,
+    input_folders: Union[Path, str, List[Union[Path, str]]] = [],
 ):
     # load HTML template
     templatename = metadata.get("template", {}).get("name")
-    template_search_paths = [ Path(filename).parent, Path(__file__).parent / "templates"]
-
-    if source is not None:
-        template_search_paths.insert(0, Path(source).parent)
 
     if templatename:
         # if relative path to template was provided, check directory of YAML file first, fall back to built-in template directory
         templatefile = smart_file_resolve(
-            f"{templatename}.html", template_search_paths
+            f"{templatename}.html",
+            make_list(input_folders) + [Path(__file__).parent / "templates"],
         )
     else:
         # fall back to built-in simple template if no template was provided

@@ -31,7 +31,6 @@ def parse(
     output_dir: Union[str, Path] = None,
     output_name: Union[None, str] = None,
     image_paths: Union[Path, str, List] = [],
-    source_path = None,
 ) -> Any:
     """
     This function takes an input, parses it as a WireViz Harness file,
@@ -116,7 +115,7 @@ def parse(
         metadata=Metadata(**yaml_data.get("metadata", {})),
         options=Options(**yaml_data.get("options", {})),
         tweak=Tweak(**yaml_data.get("tweak", {})),
-        source_path=source_path
+        input_folders=image_paths,
     )
     # others
     # store mapping of components to their respective template

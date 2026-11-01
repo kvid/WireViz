@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any, List, Union
 
 from graphviz import Graph
+
 from wireviz import APP_NAME, APP_URL, __version__, wv_colors
 from wireviz.DataClasses import (
     Cable,
@@ -70,7 +71,7 @@ class Harness:
     metadata: Metadata
     options: Options
     tweak: Tweak
-    source_path: Path
+    input_folders: Union[Path, str, List[Union[Path, str]]]
 
     def __post_init__(self):
         self.connectors = {}
@@ -698,7 +699,9 @@ class Harness:
             print("CSV output is not yet supported")
         # HTML output
         if "html" in fmt:
-            generate_html_output(filename, bomlist, self.metadata, self.options, self.source_path)
+            generate_html_output(
+                filename, bomlist, self.metadata, self.options, self.input_folders
+            )
         # PDF output
         if "pdf" in fmt:
             # TODO: implement PDF output
