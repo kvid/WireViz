@@ -134,16 +134,16 @@ def wireviz(file, format, prepend, output_dir, output_name, version):
         file_dir = file.parent
 
         yaml_input = prepend_input + yaml_input
-        image_paths = {file_dir}
+        input_folders = {file_dir}
         for p in prepend:
-            image_paths.add(Path(p).parent)
+            input_folders.add(Path(p).parent)
 
         wv.parse(
             yaml_input,
             output_formats=output_formats,
             output_dir=_output_dir,
             output_name=_output_name,
-            image_paths=list(image_paths),
+            image_paths=list(input_folders),
         )
 
     print()

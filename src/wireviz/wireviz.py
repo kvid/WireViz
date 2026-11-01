@@ -30,7 +30,7 @@ def parse(
     output_formats: Union[None, str, Tuple[str]] = None,
     output_dir: Union[str, Path] = None,
     output_name: Union[None, str] = None,
-    image_paths: Union[Path, str, List] = [],
+    image_paths: Union[Path, str, List] = [],  # TODO: Rename to input_folders
 ) -> Any:
     """
     This function takes an input, parses it as a WireViz Harness file,
